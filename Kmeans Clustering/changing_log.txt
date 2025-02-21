@@ -1,0 +1,73 @@
+Introduction
+
+This report outlines the modifications and improvements made to the K-Means clustering implementation for digit recognition and color compression. The objective was to enhance the theoretical understanding, practical performance, and visualization of clustering results.
+
+1. Theoretical Enhancements
+
+Added Explanation of K-Means Algorithm: Included details on initialization methods, distance metrics, and optimization techniques.
+
+Explored K-Means++ Initialization: Implemented k-means++ initialization to improve cluster center selection.
+
+Discussed Limitations of K-Means: Highlighted issues such as sensitivity to initialization, local optima, and difficulty handling non-spherical clusters.
+
+2. Data Preprocessing and Feature Engineering
+
+Standardized Data: Applied StandardScaler to normalize features before clustering.
+
+Implemented PCA for Dimensionality Reduction: Reduced feature dimensions from 64 to 30 using PCA to improve clustering efficiency.
+
+Explored t-SNE for Nonlinear Transformation: Applied t-SNE to project data into a 2D space before clustering, resulting in improved accuracy.
+
+3. Experimental Modifications and Analysis
+
+3.1 Digits Dataset Clustering
+
+Original K-Means Implementation:
+
+Used n_clusters=10 with k-means++ initialization.
+
+Achieved accuracy: 62.27%.
+
+Silhouette score: 0.1751, indicating poor separation between clusters.
+
+Confusion Matrix Analysis:
+
+Identified misclassifications, particularly for similar-looking digits (e.g., 3 and 8, 1 and 7).
+
+Cluster Center Visualization:
+
+Displayed learned cluster centers as 8×8 grayscale images.
+
+Improved Clustering with t-SNE:
+
+Applied t-SNE before clustering, achieving accuracy: 85.31%, a significant improvement.
+
+3.2 Color Compression Using K-Means
+
+Implemented MiniBatchKMeans for Faster Processing.
+
+Reduced Image Colors to 16 Clusters.
+
+Compressed Image While Maintaining Visual Clarity.
+
+Comparison Between Original and Compressed Images.
+
+4. Performance Evaluation and Future Improvements
+
+Comparison of Clustering Approaches:
+
+K-Means was compared with t-SNE + K-Means, demonstrating improved performance with the latter.
+
+Recommended Further Enhancements:
+
+Test different clustering algorithms (DBSCAN, Agglomerative Clustering).
+
+Experiment with various distance metrics.
+
+Tune k values for better separation.
+
+Use advanced feature extraction methods (HOG, Fourier transforms).
+
+Conclusion
+
+These modifications significantly improved the clustering performance and understanding of the K-Means algorithm. The use of PCA and t-SNE enhanced accuracy, while the image compression experiment demonstrated a practical application of clustering. The results highlight the importance of preprocessing and dimensionality reduction in improving unsupervised learning tasks.
