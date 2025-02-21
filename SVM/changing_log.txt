@@ -101,8 +101,9 @@ Identified key misclassification trends
 4. Next Steps 
 
 1️⃣ Feature Engineering: Try extracting facial landmarks instead of relying solely on PCA.
-
-2️⃣ Data Augmentation: Increase samples for low-represented classes to improve recall.3️⃣ Explore Deep Learning: Consider using a CNN-based model for better feature extraction.4️⃣ Ensemble Models: Test ensemble methods combining SVM with Random Forest for improved robustness.
+2️⃣ Data Augmentation: Increase samples for low-represented classes to improve recall.
+3️⃣ Explore Deep Learning: Consider using a CNN-based model for better feature extraction.
+4️⃣ Ensemble Models: Test ensemble methods combining SVM with Random Forest for improved robustness.
 
 5. Conclusion
 
