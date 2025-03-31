@@ -1,0 +1,29 @@
+ Transformer (DistilBERT)
+Dataset Used: IMDB (again, for benchmarking with RNN)
+
+Task: Sentiment classification
+
+Tools: Hugging Face Transformers, Datasets, TensorFlow
+
+What We Did:
+Used datasets library to load IMDb dataset.
+
+Tokenized using DistilBERT tokenizer with truncation and padding.
+
+Converted to tf.data.Dataset for model compatibility.
+
+Fine-tuned distilbert-base-uncased on IMDb with:
+
+Adam optimizer and Sparse Categorical Crossentropy.
+
+Batch size of 16 and 2 training epochs.
+
+Evaluated using classification report and saved the model/tokenizer.
+
+Challenges Faced:
+Transformer models are compute-intensive and slow on CPU.
+
+Tokenization pipeline is complex for beginners.
+
+High memory usage during training required batching and optimization.
+
