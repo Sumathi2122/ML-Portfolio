@@ -1,0 +1,33 @@
+Recurrent Neural Network (RNN)
+Dataset Used: IMDB Movie Review Dataset (binary classification)
+
+Task: Sentiment analysis of movie reviews
+
+Tools: TensorFlow/Keras, pad_sequences
+
+What We Did:
+Explored and decoded tokenized reviews using IMDb's word index.
+
+Applied padding to handle variable-length sequences.
+
+Built an RNN model:
+
+Embedding layer to learn word representations.
+
+SimpleRNN with dropout and recurrent dropout for regularization.
+
+Sigmoid activation in output layer for binary prediction.
+
+Trained using binary_crossentropy loss, evaluated with accuracy.
+
+Generated classification report with precision, recall, F1-score.
+
+Visualized model learning curves and saved trained model.
+
+Challenges Faced:
+RNNs are known to suffer from vanishing gradient issues.
+
+They do not perform well with long-range dependencies.
+
+Training was slow, and performance wasn’t optimal compared to LSTM/Transformer.
+
