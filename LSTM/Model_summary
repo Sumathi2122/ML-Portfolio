@@ -1,0 +1,34 @@
+Long Short-Term Memory (LSTM)
+Dataset Used: Jena Climate Dataset
+
+Task: Time series forecasting (temperature prediction)
+
+Tools: TensorFlow/Keras, StandardScaler, Pandas
+
+What We Did:
+Downloaded and loaded multivariate climate data.
+
+Visualized trends in temperature to understand periodicity.
+
+Selected relevant features: temperature, pressure, humidity.
+
+Normalized features using StandardScaler.
+
+Created sliding-window sequences for time series modeling.
+
+Built an LSTM model:
+
+Single LSTM layer followed by Dense layer.
+
+Trained using Mean Squared Error (MSE) loss.
+
+Evaluated performance on unseen data.
+
+Plotted training/validation loss and saved the model.
+
+Challenges Faced:
+Creating the right window size for sequences was critical.
+
+LSTM models are sensitive to the shape of input.
+
+Required feature engineering and careful normalization for stability.
