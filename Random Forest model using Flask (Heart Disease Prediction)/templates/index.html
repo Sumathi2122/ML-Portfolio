@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Heart Disease Prediction System</h1>
+        <p>Fill out the form below to get your prediction.</p>
+        <form method="POST" class="form">
+            <label for="age">Age:</label>
+            <input type="number" name="age" placeholder="Enter your age" required>
+
+            <label for="sex">Sex:</label>
+            <select name="sex">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <label for="chest_pain_type">Chest Pain Type:</label>
+            <select name="chest_pain_type">
+                <option value="asymptomatic">Asymptomatic</option>
+                <option value="atypical angina">Atypical Angina</option>
+                <option value="non-anginal pain">Non-Anginal Pain</option>
+                <option value="typical angina">Typical Angina</option>
+            </select>
+
+            <label for="resting_blood_pressure">Resting Blood Pressure:</label>
+            <input type="number" name="resting_blood_pressure" placeholder="Enter blood pressure" required>
+
+            <label for="cholestoral">Cholesterol:</label>
+            <input type="number" name="cholestoral" placeholder="Enter cholesterol level" required>
+
+            <label for="fasting_blood_sugar">Fasting Blood Sugar:</label>
+            <select name="fasting_blood_sugar">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="rest_ecg">Rest ECG:</label>
+            <select name="rest_ecg">
+                <option value="normal">Normal</option>
+                <option value="ST-T wave abnormality">ST-T Wave Abnormality</option>
+                <option value="left ventricular hypertrophy">Left Ventricular Hypertrophy</option>
+            </select>
+
+            <label for="Max_heart_rate">Max Heart Rate:</label>
+            <input type="number" name="Max_heart_rate" placeholder="Enter max heart rate" required>
+
+            <label for="exercise_induced_angina">Exercise Induced Angina:</label>
+            <select name="exercise_induced_angina">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="oldpeak">Oldpeak:</label>
+            <input type="number" step="0.1" name="oldpeak" placeholder="Enter oldpeak value" required>
+
+            <label for="slope">Slope:</label>
+            <select name="slope">
+                <option value="flat">Flat</option>
+                <option value="upsloping">Upsloping</option>
+                <option value="downsloping">Downsloping</option>
+            </select>
+
+            <label for="vessels_colored_by_flourosopy">Vessels Colored by Fluoroscopy:</label>
+            <input type="number" name="vessels_colored_by_flourosopy" placeholder="Enter number of vessels" required>
+
+            <label for="thalassemia">Thalassemia:</label>
+            <select name="thalassemia">
+                <option value="normal">Normal</option>
+                <option value="fixed defect">Fixed Defect</option>
+                <option value="reversible defect">Reversible Defect</option>
+            </select>
+
+            <button type="submit" class="submit-button">Predict</button>
+        </form>
+        {% if prediction %}
+        <div class="result">
+            <h2>{{ prediction }}</h2>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
