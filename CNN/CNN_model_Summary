@@ -1,0 +1,38 @@
+Convolutional Neural Network (CNN)
+Dataset Used: CIFAR-10
+
+Task: Multi-class image classification (10 categories)
+
+Tools: TensorFlow/Keras, ImageDataGenerator
+
+What We Did:
+Analyzed image shapes, distribution across classes.
+
+Visualized sample images using Matplotlib.
+
+Applied real-time data augmentation to enhance training:
+
+Random rotation, shifting, and horizontal flip.
+
+Built a CNN with:
+
+convolutional blocks + batch normalization + max pooling.
+
+GlobalAveragePooling and Dense layers.
+
+Trained the model using Adam optimizer, cross-entropy loss, and accuracy as metric.
+
+Added callbacks:
+
+EarlyStopping to avoid overfitting.
+
+ModelCheckpoint to save the best-performing model.
+
+Plotted accuracy/loss curves and saved the final model in .h5 format.
+
+Challenges Faced:
+CIFAR-10 images are small (32x32), making feature extraction tricky.
+
+Overfitting occurred without batch normalization and dropout.
+
+Data augmentation was essential but needed tuning for balance.
